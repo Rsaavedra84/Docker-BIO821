@@ -20,7 +20,6 @@ function  download {
   fi
 
   if [[ ! -e $2 ]]; then
-    echo 'Free'
     curl -o $2 "https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5"
   else echo 'The file already exist'
     return 1
@@ -37,7 +36,7 @@ function  download {
                     echo 'File successfully decompressed'
                   fi
                 fi
-        echo 'The hash of the database does not match with the md5 file. Check the links (database line , md5 line )'
+        else echo 'The hash of the database does not match with the md5 file. Check the links (database line , md5 line )'
         fi
 }
 
