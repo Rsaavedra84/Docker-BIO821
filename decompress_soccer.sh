@@ -32,9 +32,10 @@ function  download {
         if [[ $md5_file = $md5_hash ]]; then
                 mv $1 $(echo $3'/'$1)
                 cd $3
-                #unzip $1 -d $4
-                gunzip -d -S .zip $1
-                echo 'File successfully decompressed'
+                if [[ $4 = 'd' ]];then
+                  unzip $1
+                  echo 'File successfully decompressed'
+                fi
         fi
 }
 
