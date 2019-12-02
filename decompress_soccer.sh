@@ -14,8 +14,8 @@ function  download {
   read -p 'Kaggle Key: '
   export KAGGLE_KEY="$REPLY"
   if [[ ! -e $1 ]]; then
-    echo 'Free'
-    #~/.local/bin/kaggle datasets download --force hugomathien/soccer -f "$1" #./ will download inside the repo
+    ~/.local/bin/kaggle datasets download --force hugomathien/soccer -w #./ will download inside the repo
+    mv soccer.zip $1
   else echo 'The dataset already exist'
     return 1
   fi
@@ -28,13 +28,14 @@ function  download {
   fi
 
   md5_file=$(echo $(md5sum $1) | cut -f 1 -d ' ')
-  md5_hash=$(echo $(cat $1) | cut -f 1 -d ' ')
+  md5_hash=$(echo $(cat $2) | cut -f 1 -d ' ')
         if [[ $md5_file = $md5_hash ]]; then
                 mv $1 $(echo $3'/'$1)
                 cd $3
-                unzip $1 -d $4
+                #unzip $1 -d $4
+                gunzip -d -S .zip $1
                 echo 'File successfully decompressed'
+        fi
 }
-
 
 download "$@"
