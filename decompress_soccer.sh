@@ -13,10 +13,25 @@ function  download {
   export KAGGLE_USERNAME="$REPLY"
   read -p 'Kaggle Key: '
   export KAGGLE_KEY="$REPLY"
-  ~/.local/bin/kaggle datasets download --force hugomathien/soccer
+  if [[ ! -e $1 ]]; then
+    echo 'Free'
+    #~/.local/bin/kaggle datasets download --force hugomathien/soccer -f "$1" #./ will download inside the repo
+  else echo 'The dataset already exist'
+    return 1
+  fi
+
+  if [[ ! -e $2 ]]; then
+    echo 'Free'
+    curl -o $2 "https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5"
+  else echo 'The file already exist'
+    return 1
+  fi
+
+
+
   #move and decompress the database
-  #mkdir Documents/Europen_soccer/data  $2  #create the directory. Also a variable
-  #cp  ~/.local/bin/soccer.zip ./Documents/Europen_soccer/data/soccer.zip #this should be a variable
+  #mkdir data  #Maybe give the chance to set this as a variable
+  #mv  soccer.zip "$2"
   #unzip soccer.zip -d data
 }
 
