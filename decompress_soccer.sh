@@ -27,12 +27,13 @@ function  download {
     return 1
   fi
 
-
-
-  #move and decompress the database
-  #mkdir data  #Maybe give the chance to set this as a variable
-  #mv  soccer.zip "$2"
-  #unzip soccer.zip -d data
+  md5_file=$(echo $(md5sum $1) | cut -f 1 -d ' ')
+  md5_hash=$(echo $(cat $1) | cut -f 1 -d ' ')
+        if [[ $md5_file = $md5_hash ]]; then
+                mv $1 $(echo $3'/'$1)
+                cd $3
+                unzip $1 -d $4
+                echo 'File successfully decompressed'
 }
 
 
