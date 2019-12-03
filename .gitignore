@@ -1,5 +1,10 @@
+#This would prevent pushing the database into the repository
 data/*
+database.sqlite
 soccer.zip
+#My kaggle information
 kaggle.json
+#Other things
 .idea
 esdb.md5
+General Notes
