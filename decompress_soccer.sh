@@ -28,16 +28,15 @@ function  download {
   md5_file=$(echo $(md5sum $1) | cut -f 1 -d ' ')
   md5_hash=$(echo $(cat $2) | cut -f 1 -d ' ')
         if [[ $md5_file = $md5_hash ]]; then  #If hash match proceed
+            echo 'Hash file and md5 hash match ('$md5_file' | '$md5_hash')'
                 if [[ ! -z $3 ]]; then  #if there is a third argument...
                   mv $1 $(echo $3'/'$1)
                   cd $3
                   if [[ $4 = 'd' ]];then
                     unzip $1
-                    echo 'File successfully decompressed'
                   fi
                 fi
         else echo 'The hash of the database does not match with the md5 file. Check the links (database line , md5 line )'
         fi
 }
-
 download "$@"
