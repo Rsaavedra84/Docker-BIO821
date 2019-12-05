@@ -9,4 +9,4 @@ Final project - jm622
 
 - Scripts
     - decompress-soccer.sh (finished)
-    - augmented_data.py
+    - augmented_data.py (finished)
