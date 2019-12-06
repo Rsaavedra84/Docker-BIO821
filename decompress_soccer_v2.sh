@@ -8,8 +8,8 @@ function  download {
   # 2 argument: str [Name of the md5 file]
   # 3 argument(optative) : str [Move the dataset to a existing folder (i.e.  './data')]
   # 4 argument(optative) : str "d" [decompress the file (it will decompress the file in the new location)]
-  export KAGGLE_USERNAME=KAGGLE_USERNAME
-  export KAGGLE_KEY=KAGGLE_KEY
+  export KAGGLE_USERNAME=$KAGGLE_USERNAME
+  export KAGGLE_KEY=$KAGGLE_KEY
   if [[ ! -e $1 ]]; then
     /opt/conda/bin/kaggle datasets download --force hugomathien/soccer -w #./ will download inside the repo
     mv soccer.zip $1 #rename the file
