@@ -1,4 +1,4 @@
-docker run \
+docker run -d\
 -p 8888:8888 \
 -e GRANT_SUDO=yes \
 -e KAGGLE_KEY=$KAGGLE_KEY \
