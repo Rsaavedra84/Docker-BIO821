@@ -18,7 +18,7 @@ function  download {
   fi
 
   if [[ ! -e $2 ]]; then
-    curl -o $2 "https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5"
+    wget -O $2 "https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5"
   else echo 'The file already exist'
     #return 1
   fi
