@@ -1,6 +1,8 @@
-docker run -d \
+docker run \
 -p 8888:8888 \
 -e GRANT_SUDO=yes \
+-e KAGGLE_KEY=$KAGGLE_KEY \
+-e KAGGLE_USERNAME=$KAGGLE_USERNAME \
 --user root \
--v ${PWD}:/home/jovyan/work \
+-v ${PWD}:/kaggle_things \
 kaggle
