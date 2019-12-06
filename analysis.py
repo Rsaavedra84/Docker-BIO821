@@ -19,4 +19,13 @@ df = conn.execute('''
 
 df = pd.DataFrame(data= df, columns = ['Country','Season', 'Avg_goals_per_game'])
 
-sbn.lineplot(data = df, x='Season', y='Avg_goals_per_game', hue='Country')
+plt.figure(figsize=(20,7))
+ax = sbn.lineplot(data = df, x='Season', y='Avg_goals_per_game', hue='Country')
+ax.tick_params(labelsize = 14)
+plt.title('Average number of goals scored per gamem for each country-season', size = 16)
+plt.ylabel('Average number of goals', size = 14)
+plt.xlabel('Season', size = 14)
+ax.legend( bbox_to_anchor= (1,0.75))
+plt.show()
+
+
