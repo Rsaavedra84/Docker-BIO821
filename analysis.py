@@ -28,4 +28,12 @@ plt.xlabel('Season', size = 14)
 ax.legend( bbox_to_anchor= (1,0.75))
 plt.show()
 
+########################################################################################################################
+# Create a new feature called good_season that takes the value 1 if the average number
+# scored per game in a given season is greater than 2.75.
 
+df['good_season'] = 0
+df.loc[df['Avg_goals_per_game'] > 2.75, 'good_season'] = 1
+
+### b. Create a summary data frame that displays the number of “good seasons” for each country.
+df.groupby(by = 'Country', axis = 0).aggregate('sum').drop(columns = 'Avg_goals_per_game')
