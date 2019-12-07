@@ -1,7 +1,7 @@
 import sqlalchemy
 import os
 
-class Mapbox:
+class Country:
     '''
     Some definition of this class
     '''
