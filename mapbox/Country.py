@@ -30,11 +30,9 @@ class Country:
         self.engine = sqlalchemy.create_engine(self.db)
         self.conn = self.engine.connect()
 
-    def query (self):
+    def query (self, query):
         '''
 
         :return:
         '''
-        self.id = self.conn.execute(''' SELECT id 
-                                        FROM Country
-                         WHERE name = "{}";'''.format(self.country_name)).fetchone()[0]
+        return self.conn.execute(query).fetchall()
