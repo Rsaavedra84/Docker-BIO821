@@ -19,7 +19,7 @@ function  download {
 
   if [[ ! -e $2 ]]; then
     wget -O $2 "https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5"
-  else echo 'The file already exist'
+  else echo 'The MD5 file already exist'
     #return 1
   fi
 
