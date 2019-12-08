@@ -49,8 +49,7 @@ class RequestMapbox(Country):
         :return:
         '''
         values = '("{}","{}","{}","{}","{}")'.format(self.id, self.country_id, self.country_name, self.lat, self.long)
-        self.conn.execute('INSERT INTO {} (id, country_id, country_name, lat, long)'.format(table) +
-                          ' VALUES {};'.format(values))
+        self.conn.execute('INSERT INTO {} (id, country_id, country_name, lat, long) VALUES {};'.format(table, values))
 
     def create_table(self,table):
         '''
