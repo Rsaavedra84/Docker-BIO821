@@ -8,7 +8,7 @@ Final project - jm622
 
 
 - Scripts<br>
-[x] decompress-soccer.sh 
-[x] augmented_data.py 
-[x] analysis.py 
+[x] decompress-soccer.sh <br>
+[x] augmented_data.py  <br>
+[x] analysis.py <br>
 [ ] mapbox.py (class)
