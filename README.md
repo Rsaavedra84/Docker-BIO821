@@ -1,19 +1,19 @@
 <H3><center> Final project - BIO821 </H3></center>
 <H4><center>Joaquin Menendez (jm622)</H4></center>
 
-In order to run the scripts and the notebooks we suggest use a Docker container.
-**Warning!** You should have at least 4 gb of free space.
+To run the scripts and the notebooks we suggest using a Docker container.
+**Warning!** You should have at least 4 Gb of free space.
 
 The first step is setting **three environment variables**.
-You should add your own tokens for:
+You should add your tokens for:
 - KAGGLE_KEY
 - KAGGLE_USERNAME
 - MAPBOX_PRIVATE_TOKEN
 
 **How to do this?**<br>
-Yo will need to open your .bashrc file. Usually this is located
+You will need to open your .bashrc file. Usually, this is located
 in the following path `~/.bashrc` <br>
-You can open the file typing `nano ~/.bashrc`. Write in first line the following
+You can open the file typing `nano ~/.bashrc`. Write in the first line the following
 ```
 export KAGGLE_KEY=<your_kaggle_key>
 export KAGGLE_USERNAME=<your username>
@@ -58,8 +58,8 @@ You should have the following programs and libraries installed in your local mac
     - jupyter notebooks
 - SQLite<br>
 
-You would need to manually add your tokens into the following scripts: `mapbox/Country.py`  `augmented_data.py` and `decompress_soccer_v2.sh` <br>
+You would need to  add your tokens manually into the following scripts: `mapbox/Country.py`  `augmented_data.py` and `decompress_soccer_v2.sh` <br>
  
-If you have any doubt please let me know. 
-
+If you have any doubt, please let me know. 
+:mail:[joaquin14@gmail.com](:mailto:joaquin14@gmail.com)
  
