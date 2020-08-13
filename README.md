@@ -60,6 +60,6 @@ You should have the following programs and libraries installed in your local mac
 
 You would need to  add your tokens manually into the following scripts: `mapbox/Country.py`  `augmented_data.py` and `decompress_soccer_v2.sh` <br>
  
-If you have any doubt, please let me know. 
-:mail:[joaquin14@gmail.com](:mailto:joaquin14@gmail.com)
+If you have any doubt, please let me know. <br>
+:email: [joaquin14@gmail.com](:mailto:joaquin14@gmail.com)
  
